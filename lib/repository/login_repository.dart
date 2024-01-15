@@ -14,7 +14,7 @@ class LoginRepository extends Repository {
     FormData fdata = FormData();
     fdata.fields.addAll(fdataMap.entries.map((e) => MapEntry(e.key, e.value)));
     final response = await _dio.post(
-      'https://tugas9faura.000webhostapp.com/pemMobile/logout.php',
+      'https://futuhadif.000webhostapp.com/login.php',
       data: fdata,
     );
     prefs.remove('session_token');
@@ -27,7 +27,7 @@ class LoginRepository extends Repository {
     fdata.fields.addAll(fdataMap.entries.map((e) => MapEntry(e.key, e.value)));
 
     final response = await _dio.post(
-      'https://tugas9faura.000webhostapp.com/pemMobile/login.php',
+      'https://futuhadif.000webhostapp.com/login.php',
       data: fdata,
     );
     log("res $response");
